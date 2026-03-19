@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Shield icon -->
+  <path d="M8 8 L24 4 L40 8 L40 24 C40 34 24 44 24 44 C24 44 8 34 8 24 Z" fill="#059669" opacity="0.15" stroke="#059669" stroke-width="1.5"/>
+  <path d="M17 22 L22 27 L31 17" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Wordmark -->
+  <text x="50" y="33" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="28" font-weight="700" fill="#0f172a" letter-spacing="-0.5">Warden</text>
+</svg>
