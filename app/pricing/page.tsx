@@ -91,6 +91,7 @@ export default function PricingPage() {
         <div className="flex items-center gap-6 text-sm text-slate-500">
           <Link href="/product" className="hover:text-slate-900 transition-colors">Product</Link>
           <Link href="/pricing" className="text-slate-900 font-medium">Pricing</Link>
+          <Link href="/blog" className="hover:text-slate-900 transition-colors">Blog</Link>
           <a
             href="mailto:amar@wardenai.dev"
             className="hover:text-slate-900 transition-colors"
