@@ -17,6 +17,12 @@ export default function Home() {
           >
             Contact
           </a>
+          <a
+            href="https://dashboard.wardenai.dev/login"
+            className="bg-emerald-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
+          >
+            Sign In
+          </a>
         </div>
       </nav>
 
@@ -24,7 +30,7 @@ export default function Home() {
       <section className="max-w-4xl mx-auto px-8 pt-24 pb-20 text-center">
         <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5 text-sm text-emerald-700 mb-8">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          Now in private beta
+          Free tier: 100K events/month (~$5K AI spend estimate)
         </div>
 
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
@@ -40,10 +46,10 @@ export default function Home() {
         </p>
 
         <a
-          href="mailto:amar@wardenai.dev?subject=Warden Early Access"
+          href="https://dashboard.wardenai.dev/login"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Join the waitlist
+          Get Started Free
         </a>
 
         <p className="text-sm text-slate-400 mt-4">
@@ -142,13 +148,16 @@ export default function Home() {
           Know what your AI actually costs
         </h2>
         <p className="text-slate-500 mb-8">
-          Join the waitlist. Early access is free.
+          Free tier: 100K API events/month (covers ~$5K in AI spend*). No credit card required.
+        </p>
+        <p className="text-xs text-slate-400 mb-6">
+          *Spend estimate based on typical GPT-4o/Claude 3 pricing. Actual limit enforced by event count, not spend.
         </p>
         <a
-          href="mailto:amar@wardenai.dev?subject=Warden Early Access"
+          href="https://dashboard.wardenai.dev/login"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get early access
+          Get Started Free
         </a>
       </section>
 

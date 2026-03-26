@@ -13,8 +13,10 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "forever",
-    spend: "Up to $5K/mo",
-    spendLabel: "AI spend tracked",
+    spend: "100K events/mo",
+    spendLabel: "Usage limit",
+    events: "~$5K/mo*",
+    eventsLabel: "AI spend estimate",
     seats: "2 seats",
     features: [
       "Cost overview dashboard",
@@ -137,9 +139,19 @@ export default function PricingPage() {
               <div className="text-sm text-emerald-600 font-medium mb-1">
                 {tier.spend}
               </div>
-              <div className="text-xs text-slate-400 mb-1">
+              <div className="text-xs text-slate-400 mb-3">
                 {tier.spendLabel}
               </div>
+              {tier.events && (
+                <>
+                  <div className="text-xs text-slate-500 font-medium mb-1">
+                    {tier.events}
+                  </div>
+                  <div className="text-xs text-slate-400 mb-6">
+                    {tier.eventsLabel}
+                  </div>
+                </>
+              )}
               <div className="text-xs text-slate-400 mb-6">
                 {tier.seats}
               </div>
@@ -166,6 +178,13 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-xs text-slate-400 text-center mt-8">
+          *AI spend estimates are based on typical GPT-4o and Claude 3 pricing. Actual spend varies by model and provider.
+          <br />
+          Limits are enforced by usage event count (100K events free), not spend amount.
+        </p>
       </section>
 
       {/* FAQ */}
@@ -214,10 +233,10 @@ export default function PricingPage() {
           No credit card. No commitment. See your AI spend in minutes.
         </p>
         <a
-          href="mailto:amar@wardenai.dev?subject=Warden Early Access"
+          href="https://dashboard.wardenai.dev/login"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get early access
+          Get Started Free
         </a>
       </section>
 

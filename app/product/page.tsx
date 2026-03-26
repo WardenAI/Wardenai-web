@@ -216,13 +216,15 @@ export default function ProductPage() {
           Start tracking AI spend today
         </h2>
         <p className="text-slate-500 mb-8">
-          Free tier includes 100K events/month. No credit card required.
+          Free tier: 100K API events/month (covers ~$5K in AI spend*). No credit card required.
+          <br />
+          <span className="text-xs text-slate-400">*Spend estimate based on typical GPT-4o/Claude 3 pricing. Limits enforced by event count.</span>
         </p>
         <a
-          href="mailto:amar@wardenai.dev?subject=Warden Early Access"
+          href="https://dashboard.wardenai.dev/login"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get early access
+          Get Started Free
         </a>
       </section>
 
