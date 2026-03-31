@@ -25,6 +25,7 @@ const tiers = [
       "7-day data retention",
     ],
     cta: "Get started free",
+    href: "https://dashboard.wardenai.dev/login",
     highlight: false,
   },
   {
@@ -40,7 +41,8 @@ const tiers = [
       "30-day data retention",
       "Email support",
     ],
-    cta: "Contact sales",
+    cta: "Upgrade",
+    href: "https://dashboard.wardenai.dev/billing?plan=starter",
     highlight: false,
   },
   {
@@ -58,7 +60,8 @@ const tiers = [
       "90-day data retention",
       "Priority support",
     ],
-    cta: "Contact sales",
+    cta: "Upgrade",
+    href: "https://dashboard.wardenai.dev/billing?plan=growth",
     highlight: true,
   },
   {
@@ -78,6 +81,7 @@ const tiers = [
       "Custom SLA",
     ],
     cta: "Contact sales",
+    href: "mailto:amar@wardenai.dev?subject=Warden Enterprise Inquiry",
     highlight: false,
   },
 ];
@@ -166,7 +170,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="mailto:amar@wardenai.dev?subject=Warden Early Access"
+                href={tier.href}
                 className={`text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
                   tier.highlight
                     ? "bg-emerald-600 text-white hover:bg-emerald-700"
