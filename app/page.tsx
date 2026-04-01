@@ -45,14 +45,22 @@ export default function Home() {
           of AI API spend. No spreadsheets. No guesswork.
         </p>
 
-        <a
-          href="https://www.npmjs.com/package/@wardenai/sdk"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
-        >
-          View SDK on npm
-        </a>
+        <div className="flex items-center gap-4 justify-center">
+          <a
+            href="https://dashboard.wardenai.dev/signup"
+            className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
+          >
+            Get Started Free
+          </a>
+          <a
+            href="https://www.npmjs.com/package/@wardenai/sdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-slate-600 font-semibold px-8 py-3.5 rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors text-base"
+          >
+            View SDK on npm
+          </a>
+        </div>
 
         <p className="text-sm text-slate-400 mt-4">
           We never store your prompt content. Ever.
@@ -156,12 +164,10 @@ export default function Home() {
           *Spend estimate based on typical GPT-4o/Claude 3 pricing. Actual limit enforced by event count, not spend.
         </p>
         <a
-          href="https://www.npmjs.com/package/@wardenai/sdk"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://dashboard.wardenai.dev/signup"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          View SDK on npm
+          Get Started Free
         </a>
       </section>
 

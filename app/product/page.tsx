@@ -221,12 +221,10 @@ export default function ProductPage() {
           <span className="text-xs text-slate-400">*Spend estimate based on typical GPT-4o/Claude 3 pricing. Limits enforced by event count.</span>
         </p>
         <a
-          href="https://www.npmjs.com/package/@wardenai/sdk"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://dashboard.wardenai.dev/signup"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          View SDK on npm
+          Get Started Free
         </a>
       </section>
 
