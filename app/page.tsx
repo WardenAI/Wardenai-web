@@ -18,10 +18,10 @@ export default function Home() {
             Contact
           </a>
           <a
-            href="https://dashboard.wardenai.dev/login"
+            href="mailto:amar@wardenai.dev?subject=Warden Inquiry"
             className="bg-emerald-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
           >
-            Sign In
+            Talk to Us
           </a>
         </div>
       </nav>
@@ -46,10 +46,12 @@ export default function Home() {
         </p>
 
         <a
-          href="https://dashboard.wardenai.dev/login"
+          href="https://www.npmjs.com/package/@wardenai/sdk"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get Started Free
+          View SDK on npm
         </a>
 
         <p className="text-sm text-slate-400 mt-4">
@@ -154,10 +156,12 @@ export default function Home() {
           *Spend estimate based on typical GPT-4o/Claude 3 pricing. Actual limit enforced by event count, not spend.
         </p>
         <a
-          href="https://dashboard.wardenai.dev/login"
+          href="https://www.npmjs.com/package/@wardenai/sdk"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get Started Free
+          View SDK on npm
         </a>
       </section>
 

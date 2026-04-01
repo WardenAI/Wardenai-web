@@ -24,8 +24,8 @@ const tiers = [
       "Multi-provider support",
       "7-day data retention",
     ],
-    cta: "Get started free",
-    href: "https://dashboard.wardenai.dev/login",
+    cta: "View SDK on npm",
+    href: "https://www.npmjs.com/package/@wardenai/sdk",
     highlight: false,
   },
   {
@@ -41,8 +41,8 @@ const tiers = [
       "30-day data retention",
       "Email support",
     ],
-    cta: "Upgrade",
-    href: "https://dashboard.wardenai.dev/billing?plan=starter",
+    cta: "Contact sales",
+    href: "mailto:amar@wardenai.dev?subject=Warden Starter Plan Inquiry",
     highlight: false,
   },
   {
@@ -60,8 +60,8 @@ const tiers = [
       "90-day data retention",
       "Priority support",
     ],
-    cta: "Upgrade",
-    href: "https://dashboard.wardenai.dev/billing?plan=growth",
+    cta: "Contact sales",
+    href: "mailto:amar@wardenai.dev?subject=Warden Growth Plan Inquiry",
     highlight: true,
   },
   {
@@ -237,10 +237,12 @@ export default function PricingPage() {
           No credit card. No commitment. See your AI spend in minutes.
         </p>
         <a
-          href="https://dashboard.wardenai.dev/login"
+          href="https://www.npmjs.com/package/@wardenai/sdk"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
         >
-          Get Started Free
+          View SDK on npm
         </a>
       </section>
 
