@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Product — Warden",
   description:
-    "See how Warden gives FinOps teams real-time visibility into AI API spend across OpenAI, Anthropic, and Google.",
+    "Warden gives teams real-time control over AI spend across OpenAI, Anthropic, and Google — enforce budgets, prevent runaway costs, attribute every dollar.",
 };
 
 export default function ProductPage() {
@@ -32,14 +32,14 @@ export default function ProductPage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-8 pt-20 pb-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6">
-          AI cost visibility your
+          AI cost control your
           <br />
           <span className="text-slate-400">CFO will actually trust</span>
         </h1>
         <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-          Warden intercepts every LLM API call, attributes cost to the team,
-          feature, and customer that caused it, and surfaces it in dashboards
-          built for FinOps — not developers.
+          Warden intercepts every LLM API call, enforces budgets, attributes
+          cost to the team, feature, and customer that caused it, and gives
+          finance real-time control — not just dashboards.
         </p>
       </section>
 
@@ -213,7 +213,7 @@ export default function ProductPage() {
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-8 py-20 border-t border-slate-100 text-center">
         <h2 className="text-3xl font-semibold mb-4">
-          Start tracking AI spend today
+          Take control of your AI costs
         </h2>
         <p className="text-slate-500 mb-8">
           Free tier: 100K API events/month (covers ~$5K in AI spend*). No credit card required.
