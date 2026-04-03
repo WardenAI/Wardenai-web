@@ -5,85 +5,114 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing — Warden",
   description:
-    "Simple, transparent pricing based on your AI spend. Free tier included. No credit card required.",
+    "From visibility to full enforcement. Choose the level of AI cost control your team needs.",
 };
 
 const tiers = [
   {
-    name: "Free",
+    name: "Visibility",
     price: "$0",
     period: "forever",
-    spend: "100K events/mo",
-    spendLabel: "Usage limit",
-    events: "~$5K/mo*",
-    eventsLabel: "AI spend estimate",
+    tagline: "See your AI usage and costs in one place",
+    audience: "For individuals and early exploration",
     seats: "2 seats",
     features: [
-      "Cost overview dashboard",
-      "Attribution by feature, model, team",
-      "Multi-provider support",
+      "Usage tracking across providers",
+      "Basic cost dashboards",
+      "Limited attribution (model-level)",
       "7-day data retention",
+      "Community support",
     ],
     cta: "Get started free",
     href: "https://dashboard.wardenai.dev/signup",
     highlight: false,
+    badge: null,
+    callout: null,
   },
   {
-    name: "Starter",
+    name: "Awareness",
     price: "$299",
     period: "/month",
-    spend: "Up to $50K/mo",
-    spendLabel: "AI spend tracked",
+    tagline: "Understand what\u2019s driving your AI costs",
+    audience: "For small teams tracking early AI usage",
     seats: "5 seats",
     features: [
-      "Everything in Free",
-      "Budget alerts",
-      "30-day data retention",
+      "Model-level cost breakdown",
+      "Feature-level attribution",
+      "Alerts for unusual spikes",
+      "Historical trends (30 days)",
       "Email support",
     ],
     cta: "Contact sales",
-    href: "mailto:amar@wardenai.dev?subject=Warden Starter Plan Inquiry",
+    href: "mailto:amar@wardenai.dev?subject=Warden Awareness Plan Inquiry",
     highlight: false,
+    badge: null,
+    callout: null,
   },
   {
-    name: "Growth",
+    name: "Governance",
     price: "$1,499",
     period: "/month",
-    spend: "Up to $500K/mo",
-    spendLabel: "AI spend tracked",
+    tagline: "Manage and control AI spend across teams and features",
+    audience: "For growing teams running AI in production",
     seats: "15 seats",
     features: [
-      "Everything in Starter",
-      "Slack alerts",
-      "Chargeback reports",
-      "CSV / API export",
+      "Budget tracking per feature/team",
+      "Policy configuration",
+      "Customer-level attribution",
+      "Advanced alerts (Slack, email)",
+      "Team-level visibility",
+      "Chargeback reports & CSV export",
       "90-day data retention",
       "Priority support",
     ],
     cta: "Contact sales",
-    href: "mailto:amar@wardenai.dev?subject=Warden Growth Plan Inquiry",
+    href: "mailto:amar@wardenai.dev?subject=Warden Governance Plan Inquiry",
     highlight: true,
+    badge: "Best for growing teams",
+    callout: "Avoid costly surprises as your AI usage scales",
   },
   {
-    name: "Enterprise",
+    name: "Control",
     price: "$4,999+",
     period: "/month",
-    spend: "Unlimited",
-    spendLabel: "AI spend tracked",
+    tagline: "Actively enforce and control AI spend in real time",
+    audience: "For companies where AI spend impacts revenue and margins",
     seats: "Unlimited seats",
     features: [
-      "Everything in Growth",
-      "Self-hosted deployment",
+      "Hard budget enforcement (block / throttle)",
+      "Cost guardrails across features & customers",
+      "Enforcement policies (limit, restrict, fallback)",
+      "Self-hosted deployment option",
       "SSO / SAML (Okta, Azure AD)",
-      "Policy engine",
       "Unlimited data retention",
-      "Dedicated support",
-      "Custom SLA",
+      "Custom integrations",
+      "Dedicated support & custom SLA",
     ],
-    cta: "Contact sales",
-    href: "mailto:amar@wardenai.dev?subject=Warden Enterprise Inquiry",
+    cta: "Talk to us about control",
+    href: "mailto:amar@wardenai.dev?subject=Warden Control Plan Inquiry",
     highlight: false,
+    badge: "Full enforcement",
+    callout: null,
   },
+];
+
+const comparisonRows = [
+  { capability: "Cost visibility", free: true, awareness: true, governance: true, control: true },
+  { capability: "Multi-provider support", free: true, awareness: true, governance: true, control: true },
+  { capability: "Model-level attribution", free: false, awareness: true, governance: true, control: true },
+  { capability: "Feature-level attribution", free: false, awareness: true, governance: true, control: true },
+  { capability: "Customer-level attribution", free: false, awareness: false, governance: true, control: true },
+  { capability: "Spike alerts", free: false, awareness: true, governance: true, control: true },
+  { capability: "Advanced alerts (Slack)", free: false, awareness: false, governance: true, control: true },
+  { capability: "Budget tracking", free: false, awareness: false, governance: true, control: true },
+  { capability: "Policy configuration", free: false, awareness: false, governance: true, control: true },
+  { capability: "Chargeback reports", free: false, awareness: false, governance: true, control: true },
+  { capability: "Hard budget enforcement", free: false, awareness: false, governance: false, control: true },
+  { capability: "Real-time blocking / throttling", free: false, awareness: false, governance: false, control: true },
+  { capability: "Enforcement policies (fallback)", free: false, awareness: false, governance: false, control: true },
+  { capability: "Self-hosted deployment", free: false, awareness: false, governance: false, control: true },
+  { capability: "SSO / SAML", free: false, awareness: false, governance: false, control: true },
 ];
 
 export default function PricingPage() {
@@ -108,18 +137,25 @@ export default function PricingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto px-8 pt-20 pb-12 text-center">
+      <section className="max-w-4xl mx-auto px-8 pt-24 pb-8 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
-          Simple, transparent pricing
+          From visibility to control
         </h1>
-        <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-          Pay based on your AI spend, not API call volume.
-          Start free — upgrade when your AI usage grows.
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Start by understanding your AI spend. Scale to full enforcement
+          as your usage — and your need for control — grows.
+        </p>
+      </section>
+
+      {/* Qualification line */}
+      <section className="max-w-4xl mx-auto px-8 pb-16 text-center">
+        <p className="text-base font-semibold text-slate-900">
+          If you&apos;re spending more than $5K/month on AI, you need control — not just visibility.
         </p>
       </section>
 
       {/* Pricing Grid */}
-      <section className="max-w-6xl mx-auto px-8 pb-20">
+      <section className="max-w-6xl mx-auto px-8 pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {tiers.map((tier) => (
             <div
@@ -127,54 +163,83 @@ export default function PricingPage() {
               className={`rounded-xl p-6 flex flex-col ${
                 tier.highlight
                   ? "bg-white border-2 border-emerald-500 shadow-lg"
-                  : "bg-slate-50 border border-slate-200"
+                  : tier.name === "Control"
+                  ? "bg-slate-900 text-white border border-slate-700"
+                  : "bg-white border border-slate-200 shadow-sm"
               }`}
             >
-              {tier.highlight && (
-                <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-4">
-                  Most popular
+              {tier.badge && (
+                <span className={`text-xs font-semibold uppercase tracking-wide mb-4 ${
+                  tier.name === "Control"
+                    ? "text-emerald-400"
+                    : "text-emerald-600"
+                }`}>
+                  {tier.badge}
                 </span>
               )}
-              <h3 className="text-lg font-semibold mb-1">{tier.name}</h3>
-              <div className="mb-1">
+              <h3 className={`text-lg font-semibold mb-1 ${
+                tier.name === "Control" ? "text-white" : ""
+              }`}>
+                {tier.name}
+              </h3>
+              <div className="mb-2">
                 <span className="text-3xl font-bold">{tier.price}</span>
                 <span className="text-sm text-slate-400">{tier.period}</span>
               </div>
-              <div className="text-sm text-emerald-600 font-medium mb-1">
-                {tier.spend}
-              </div>
-              <div className="text-xs text-slate-400 mb-3">
-                {tier.spendLabel}
-              </div>
-              {tier.events && (
-                <>
-                  <div className="text-xs text-slate-500 font-medium mb-1">
-                    {tier.events}
-                  </div>
-                  <div className="text-xs text-slate-400 mb-6">
-                    {tier.eventsLabel}
-                  </div>
-                </>
-              )}
+              <p className={`text-sm font-medium mb-1 ${
+                tier.name === "Control" ? "text-slate-200" : "text-slate-700"
+              }`}>
+                {tier.tagline}
+              </p>
+              <p className="text-xs text-slate-400 mb-4">
+                {tier.audience}
+              </p>
               <div className="text-xs text-slate-400 mb-6">
                 {tier.seats}
               </div>
 
-              <ul className="flex-1 space-y-3 mb-8">
+              <ul className="flex-1 space-y-3 mb-6">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm text-slate-600">
-                    <span className="text-emerald-600 mt-0.5">&#10003;</span>
+                  <li key={feature} className={`flex items-start gap-2 text-sm ${
+                    tier.name === "Control" ? "text-slate-300" : "text-slate-600"
+                  }`}>
+                    <span className={`mt-0.5 ${
+                      tier.name === "Control" ? "text-emerald-400" : "text-emerald-600"
+                    }`}>&#10003;</span>
                     {feature}
                   </li>
                 ))}
               </ul>
 
+              {tier.callout && (
+                <div className="bg-emerald-50 border border-emerald-200 rounded-xl px-4 py-3 mb-6">
+                  <p className="text-sm font-medium text-emerald-700">
+                    {tier.callout}
+                  </p>
+                </div>
+              )}
+
+              {tier.name === "Control" && (
+                <div className="space-y-2 mb-6">
+                  <div className="bg-emerald-900/30 border border-emerald-700/50 rounded-xl px-4 py-3">
+                    <p className="text-sm font-medium text-emerald-400">
+                      Prevents runaway AI costs automatically
+                    </p>
+                  </div>
+                  <p className="text-xs text-slate-400 text-center">
+                    Used by teams running AI at production scale
+                  </p>
+                </div>
+              )}
+
               <a
                 href={tier.href}
-                className={`text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                className={`text-center py-3 rounded-lg text-sm font-semibold transition-colors ${
                   tier.highlight
                     ? "bg-emerald-600 text-white hover:bg-emerald-700"
-                    : "bg-white text-slate-900 hover:bg-slate-100 border border-slate-300"
+                    : tier.name === "Control"
+                    ? "bg-white text-slate-900 hover:bg-slate-100"
+                    : "bg-white text-slate-900 hover:bg-slate-50 border border-slate-300"
                 }`}
               >
                 {tier.cta}
@@ -182,66 +247,217 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
+      </section>
 
-        {/* Disclaimer */}
-        <p className="text-xs text-slate-400 text-center mt-8">
-          *AI spend estimates are based on typical GPT-4o and Claude 3 pricing. Actual spend varies by model and provider.
-          <br />
-          Limits are enforced by usage event count (100K events free), not spend amount.
-        </p>
+      {/* Comparison Table */}
+      <section className="bg-slate-50">
+        <div className="max-w-5xl mx-auto px-8 py-24">
+          <h2 className="text-2xl font-semibold text-center mb-4">
+            Compare plans
+          </h2>
+          <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
+            Each tier adds deeper insight and stronger control over your AI spend.
+          </p>
+
+          <div className="overflow-x-auto bg-white border border-slate-200 rounded-xl shadow-sm">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-slate-200">
+                  <th className="text-left py-3 pl-6 pr-4 font-medium text-slate-400">Capability</th>
+                  <th className="text-center py-3 px-3 font-medium text-slate-400">Visibility</th>
+                  <th className="text-center py-3 px-3 font-medium text-slate-400">Awareness</th>
+                  <th className="text-center py-3 px-3 font-medium text-emerald-600">Governance</th>
+                  <th className="text-center py-3 px-3 pr-6 font-medium text-slate-900">Control</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map(({ capability, free, awareness, governance, control }, i) => (
+                  <tr
+                    key={capability}
+                    className={`border-b border-slate-100 ${
+                      i >= 10 ? "bg-slate-50" : ""
+                    }`}
+                  >
+                    <td className={`py-3 pl-6 pr-4 ${
+                      i >= 10 ? "text-slate-900 font-medium" : "text-slate-700"
+                    }`}>
+                      {capability}
+                    </td>
+                    <td className="text-center py-3 px-3">
+                      {free
+                        ? <span className="text-emerald-600">&#10003;</span>
+                        : <span className="text-slate-300">&mdash;</span>}
+                    </td>
+                    <td className="text-center py-3 px-3">
+                      {awareness
+                        ? <span className="text-emerald-600">&#10003;</span>
+                        : <span className="text-slate-300">&mdash;</span>}
+                    </td>
+                    <td className="text-center py-3 px-3">
+                      {governance
+                        ? <span className="text-emerald-600">&#10003;</span>
+                        : <span className="text-slate-300">&mdash;</span>}
+                    </td>
+                    <td className="text-center py-3 px-3 pr-6">
+                      {control
+                        ? <span className="text-emerald-600 font-semibold">&#10003;</span>
+                        : <span className="text-slate-300">&mdash;</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Buyer Journey */}
+      <section className="bg-white">
+        <div className="max-w-5xl mx-auto px-8 py-24">
+          <h2 className="text-2xl font-semibold text-center mb-4">
+            Start simple. Scale to full control.
+          </h2>
+          <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
+            Warden grows with your AI usage. Start anywhere and upgrade as your needs evolve.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
+            {[
+              { step: "01", label: "Start with visibility into your AI spend" },
+              { step: "02", label: "Understand what\u2019s driving costs" },
+              { step: "03", label: "Set budgets and policies across teams" },
+              { step: "04", label: "Enforce limits and control spend automatically" },
+            ].map(({ step, label }) => (
+              <div
+                key={step}
+                className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm"
+              >
+                <div className="text-xs font-mono text-emerald-600 mb-2">{step}</div>
+                <p className="text-sm text-slate-700 leading-relaxed">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cost of not using */}
+      <section className="bg-slate-50">
+        <div className="max-w-5xl mx-auto px-8 py-24">
+          <h2 className="text-2xl font-semibold text-center mb-4">
+            What happens without control?
+          </h2>
+          <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
+            Most teams don&apos;t realize the cost of inaction until the bill arrives.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              "Unexpected spikes in AI bills with no warning",
+              "No visibility into what caused them",
+              "Features becoming unprofitable without anyone noticing",
+              "No way to enforce limits before damage is done",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 bg-red-50 border border-red-100 rounded-xl px-5 py-4 text-sm text-slate-700"
+              >
+                <span className="text-red-400 text-lg">&#10005;</span>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI + Value Framing */}
+      <section className="bg-white">
+        <div className="max-w-5xl mx-auto px-8 py-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+              <h2 className="text-xl font-semibold mb-4">
+                AI costs scale faster than expected
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Companies often underestimate how quickly AI spend grows as
+                usage increases. A single feature launch or model upgrade can
+                double costs overnight. Warden helps teams stay ahead by
+                providing visibility early and control when it matters most.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+              <h2 className="text-xl font-semibold mb-4">
+                Designed to pay for itself
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                If your team spends $20K/month on AI, reducing even a small
+                percentage of unnecessary usage can save thousands.
+              </p>
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                <p className="text-sm text-slate-700">
+                  Warden helps identify inefficiencies early and enforce limits
+                  before costs grow out of control — quickly offsetting its own cost.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* FAQ */}
-      <section className="max-w-3xl mx-auto px-8 py-16 border-t border-slate-100">
-        <h2 className="text-2xl font-semibold text-center mb-12">
-          Frequently asked questions
-        </h2>
+      <section className="bg-slate-50">
+        <div className="max-w-3xl mx-auto px-8 py-24">
+          <h2 className="text-2xl font-semibold text-center mb-16">
+            Frequently asked questions
+          </h2>
 
-        <div className="space-y-8">
-          {[
-            {
-              q: "What counts as 'AI spend tracked'?",
-              a: "The total dollar amount of LLM API calls that pass through Warden in a given month. This includes all providers — OpenAI, Anthropic, and Google. We calculate cost based on actual token usage and published provider pricing.",
-            },
-            {
-              q: "Do you store my prompts or responses?",
-              a: "No. Warden never stores prompt content, completion text, or raw request bodies. This is an architectural guarantee enforced by CI tests on every commit — not a policy setting.",
-            },
-            {
-              q: "Can I try Warden before committing to a paid plan?",
-              a: "Yes. The Free tier is permanent, not a trial. It tracks up to $5K/month in AI spend with full attribution and dashboards. No credit card required.",
-            },
-            {
-              q: "How long does integration take?",
-              a: "Most teams are up and running in under an hour. Install the SDK, set your Warden API key, and add a feature tag to your existing LLM calls. No infrastructure changes required.",
-            },
-            {
-              q: "What if I need a custom plan?",
-              a: "Enterprise plans are fully customizable — custom SLAs, volume pricing, dedicated support, and self-hosted deployment. Contact us at amar@wardenai.dev.",
-            },
-          ].map(({ q, a }) => (
-            <div key={q}>
-              <h3 className="font-semibold mb-2">{q}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{a}</p>
-            </div>
-          ))}
+          <div className="space-y-8">
+            {[
+              {
+                q: "What\u2019s the difference between Governance and Control?",
+                a: "Governance gives you budget tracking, policies, and team-level attribution \u2014 the tools to manage AI spend proactively. Control adds real-time enforcement: hard budget limits that block or throttle requests, fallback model policies, and automated cost guardrails. If you need to prevent cost overruns (not just see them), you need Control.",
+              },
+              {
+                q: "Do you store my prompts or responses?",
+                a: "No. Warden never stores prompt content, completion text, or raw request bodies. This is an architectural guarantee enforced by CI tests on every commit \u2014 not a policy setting.",
+              },
+              {
+                q: "Can I try Warden before committing to a paid plan?",
+                a: "Yes. The Visibility tier is permanent, not a trial. It gives you usage tracking and basic dashboards across all providers. No credit card required.",
+              },
+              {
+                q: "How long does integration take?",
+                a: "Most teams are up and running in under an hour. Install the SDK, set your Warden API key, and add a feature tag to your existing LLM calls. No infrastructure changes required.",
+              },
+              {
+                q: "What if I need a custom plan?",
+                a: "Control plans are fully customizable \u2014 custom SLAs, volume pricing, dedicated support, and self-hosted deployment. Contact us at amar@wardenai.dev.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q}>
+                <h3 className="font-semibold mb-2">{q}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="max-w-4xl mx-auto px-8 py-20 border-t border-slate-100 text-center">
-        <h2 className="text-3xl font-semibold mb-4">
-          Start for free. Scale when ready.
-        </h2>
-        <p className="text-slate-500 mb-8">
-          No credit card. No commitment. See your AI spend in minutes.
-        </p>
-        <a
-          href="https://dashboard.wardenai.dev/signup"
-          className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-emerald-700 transition-colors text-base"
-        >
-          Get Started Free
-        </a>
+      <section className="bg-white">
+        <div className="max-w-5xl mx-auto px-8 py-24 text-center">
+          <h2 className="text-3xl font-semibold mb-4">
+            Start with visibility. Scale to control.
+          </h2>
+          <p className="text-slate-600 mb-8">
+            No credit card. No commitment. See your AI spend in minutes.
+          </p>
+          <a
+            href="https://dashboard.wardenai.dev/signup"
+            className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-base"
+          >
+            Get Started Free
+          </a>
+        </div>
       </section>
 
       {/* Footer */}
