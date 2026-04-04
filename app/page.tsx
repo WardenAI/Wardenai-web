@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="flex items-center gap-4 justify-center">
           <a
-            href="https://dashboard.wardenai.dev/signup"
+            href="https://control.wardenai.dev/signup"
             className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-base"
           >
             Get Started Free
@@ -322,7 +322,7 @@ export default function Home() {
             Start free. Scale to full control as your usage grows.
           </p>
           <a
-            href="https://dashboard.wardenai.dev/signup"
+            href="https://control.wardenai.dev/signup"
             className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-base"
           >
             Get Started Free

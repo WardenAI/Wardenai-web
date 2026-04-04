@@ -24,17 +24,17 @@ const tiers = [
       "Community support",
     ],
     cta: "Get started free",
-    href: "https://dashboard.wardenai.dev/signup",
+    href: "https://control.wardenai.dev/signup",
     highlight: false,
     badge: null,
     callout: null,
   },
   {
     name: "Awareness",
-    price: "$299",
+    price: "Starting at $499",
     period: "/month",
     tagline: "Understand what\u2019s driving your AI costs",
-    audience: "For small teams tracking early AI usage",
+    audience: "Designed for early-stage AI usage. Scales as your usage grows.",
     seats: "5 seats",
     features: [
       "Model-level cost breakdown",
@@ -47,11 +47,11 @@ const tiers = [
     href: "mailto:amar@wardenai.dev?subject=Warden Awareness Plan Inquiry",
     highlight: false,
     badge: null,
-    callout: null,
+    callout: "+ usage-based pricing aligned with your AI spend",
   },
   {
     name: "Governance",
-    price: "$1,499",
+    price: "Starting at $2,000",
     period: "/month",
     tagline: "Manage and control AI spend across teams and features",
     audience: "For growing teams running AI in production",
@@ -65,16 +65,19 @@ const tiers = [
       "Chargeback reports & CSV export",
       "90-day data retention",
       "Priority support",
+      "Enforce cost guardrails",
+      "Apply policies",
+      "Control spend behavior",
     ],
     cta: "Contact sales",
     href: "mailto:amar@wardenai.dev?subject=Warden Governance Plan Inquiry",
     highlight: true,
     badge: "Best for growing teams",
-    callout: "Avoid costly surprises as your AI usage scales",
+    callout: "+ usage-based pricing aligned with your AI spend",
   },
   {
     name: "Control",
-    price: "$4,999+",
+    price: "Starting at $5,000",
     period: "/month",
     tagline: "Actively enforce and control AI spend in real time",
     audience: "For companies where AI spend impacts revenue and margins",
@@ -88,12 +91,14 @@ const tiers = [
       "Unlimited data retention",
       "Custom integrations",
       "Dedicated support & custom SLA",
+      "Prevent runaway AI spend before it happens",
+      "Automatically reduce costs with intelligent model routing",
     ],
     cta: "Talk to us about control",
     href: "mailto:amar@wardenai.dev?subject=Warden Control Plan Inquiry",
     highlight: false,
     badge: "Full enforcement",
-    callout: null,
+    callout: "+ usage-based pricing aligned with your AI spend",
   },
 ];
 
@@ -219,18 +224,6 @@ export default function PricingPage() {
                 </div>
               )}
 
-              {tier.name === "Control" && (
-                <div className="space-y-2 mb-6">
-                  <div className="bg-emerald-900/30 border border-emerald-700/50 rounded-xl px-4 py-3">
-                    <p className="text-sm font-medium text-emerald-400">
-                      Prevents runaway AI costs automatically
-                    </p>
-                  </div>
-                  <p className="text-xs text-slate-400 text-center">
-                    Used by teams running AI at production scale
-                  </p>
-                </div>
-              )}
 
               <a
                 href={tier.href}
@@ -452,7 +445,7 @@ export default function PricingPage() {
             No credit card. No commitment. See your AI spend in minutes.
           </p>
           <a
-            href="https://dashboard.wardenai.dev/signup"
+            href="https://control.wardenai.dev/signup"
             className="inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-base"
           >
             Get Started Free
