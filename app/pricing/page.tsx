@@ -52,7 +52,7 @@ const tiers = [
   {
     name: "Governance",
     price: "Starting at $2,000",
-    period: "/month",
+    period: "/month + usage-based",
     tagline: "Define rules, monitor behavior, and influence AI spend across teams",
     audience: "For growing teams running AI in production",
     seats: "15 seats",
@@ -76,7 +76,7 @@ const tiers = [
   {
     name: "Control",
     price: "Starting at $5,000",
-    period: "/month",
+    period: "/month + usage-based",
     tagline: "Actively enforce and control AI spend in real time",
     audience: "For companies where AI spend impacts revenue and margins",
     seats: "Unlimited seats",
