@@ -52,7 +52,7 @@ const tiers = [
   {
     name: "Governance",
     price: "Starting at $2,000",
-    period: "/month + usage-based",
+    period: "/month",
     tagline: "Define rules, monitor behavior, and influence AI spend across teams",
     audience: "For growing teams running AI in production",
     seats: "15 seats",
@@ -71,12 +71,12 @@ const tiers = [
     href: "mailto:amar@wardenai.dev?subject=Warden Governance Plan Inquiry",
     highlight: true,
     badge: "Best for growing teams",
-    callout: "Upgrade to Control to enforce decisions in real time",
+    callout: "+ usage-based pricing aligned with your AI spend",
   },
   {
     name: "Control",
     price: "Starting at $5,000",
-    period: "/month + usage-based",
+    period: "/month",
     tagline: "Actively enforce and control AI spend in real time",
     audience: "For companies where AI spend impacts revenue and margins",
     seats: "Unlimited seats",
