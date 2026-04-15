@@ -142,11 +142,11 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-8 pt-24 pb-8 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
-          From visibility to control
+          Start free. Enforce when it matters.
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Start by understanding your AI spend. Scale to full enforcement
-          as your usage — and your need for control — grows.
+          Every tier adds more control. Start with attribution and alerts.
+          Scale to hard enforcement when your AI spend demands it.
         </p>
       </section>
 
@@ -247,7 +247,7 @@ export default function PricingPage() {
             Compare plans
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            Each tier adds deeper insight and stronger control over your AI spend.
+            Each tier adds stronger enforcement. Control tier is where Warden blocks, routes, and enforces in real time.
           </p>
 
           <div className="overflow-x-auto bg-white border border-slate-200 rounded-xl shadow-sm">
@@ -437,10 +437,10 @@ export default function PricingPage() {
       <section className="bg-white">
         <div className="max-w-5xl mx-auto px-8 py-24 text-center">
           <h2 className="text-3xl font-semibold mb-4">
-            Start with visibility. Scale to control.
+            Put your AI layer under control.
           </h2>
           <p className="text-slate-600 mb-8">
-            No credit card. No commitment. See your AI spend in minutes.
+            No credit card. No commitment. Up and running in under an hour.
           </p>
           <a
             href="https://control.wardenai.dev/signup"

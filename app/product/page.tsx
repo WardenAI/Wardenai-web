@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Product — Warden",
   description:
-    "Detect unexpected AI spend, understand what caused it, and take control before it becomes a problem. Warden gives teams real-time cost governance across OpenAI, Anthropic, and Google.",
+    "Warden sits in front of your LLM calls and makes real-time decisions — block, route, enforce. Control how AI is used across your system without changing your application code.",
 };
 
 export default function ProductPage() {
@@ -32,12 +32,10 @@ export default function ProductPage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-8 pt-24 pb-24 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6">
-          Detect. Understand. Act.
+          Enforce. Attribute. Control.
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Warden gives you the workflow to find unexpected AI spend,
-          understand exactly what caused it, and take control before
-          it becomes a recurring problem.
+          Warden sits in front of your LLM calls and makes real-time decisions. Block requests when budgets hit. Route to cheaper models based on your rules. Attribute every dollar to the exact feature, team, or customer that spent it.
         </p>
       </section>
 
@@ -46,29 +44,28 @@ export default function ProductPage() {
         <div className="max-w-5xl mx-auto px-8 py-24">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-xs font-mono text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1">01</span>
-            <span className="text-xs font-mono text-slate-400 uppercase tracking-wide">Detect</span>
+            <span className="text-xs font-mono text-slate-400 uppercase tracking-wide">Enforce</span>
           </div>
           <h2 className="text-2xl font-semibold mb-4">
-            Detect unexpected AI spend in real time
+            Block requests before costs get out of hand
           </h2>
           <p className="text-slate-600 mb-16 max-w-2xl">
-            Warden monitors every API call as it happens. When spend deviates
-            from normal patterns, you know immediately — not at the end of the month.
+            Warden evaluates every request inline — before it hits your LLM provider. When a budget limit is reached, the request is blocked. Not flagged for review. Blocked.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
-                title: "Spike detection",
-                body: "Automatic alerts when spend or request volume exceeds expected ranges.",
+                title: "Hard budget limits",
+                body: "Set spend limits per feature, team, or customer. When the threshold hits, Warden blocks the request — not an alert, a block.",
               },
               {
-                title: "Anomaly highlighting",
-                body: "Surface unusual patterns — a model suddenly costing more, a team ramping unexpectedly.",
+                title: "Runaway protection",
+                body: "A bug triggers 4,000 requests. Warden stops it at budget. Without it, no one notices until the invoice.",
               },
               {
-                title: "Real-time dashboards",
-                body: "Live cost trends, top spenders, and model usage breakdowns updated as requests flow.",
+                title: "Real-time alerts",
+                body: "Get notified at 80% and 100% of budget via email or Slack. Know before the block fires.",
               },
             ].map(({ title, body }) => (
               <div
@@ -148,29 +145,28 @@ export default function ProductPage() {
         <div className="max-w-5xl mx-auto px-8 py-24">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-xs font-mono text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1">03</span>
-            <span className="text-xs font-mono text-slate-400 uppercase tracking-wide">Act</span>
+            <span className="text-xs font-mono text-slate-400 uppercase tracking-wide">Route</span>
           </div>
           <h2 className="text-2xl font-semibold mb-4">
-            Take control before it becomes a problem
+            Change which model is used — without touching your code
           </h2>
           <p className="text-slate-600 mb-16 max-w-2xl">
-            Set budgets, trigger alerts, and enforce limits — all from the same
-            platform where you see the data.
+            Define rules. Warden enforces them on every request. Dev environment uses GPT-4o-mini. Free users get the cheaper model. Near budget pressure — Warden downgrades automatically.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
-                title: "Budgets",
-                body: "Set spend limits per feature, team, or customer. Budgets reset on your billing cycle.",
+                title: "Environment routing",
+                body: "Force cheaper models in dev and staging. Best models only in production. Zero app changes.",
               },
               {
-                title: "Alerts",
-                body: "Get notified via email or Slack before thresholds are crossed. Configure at any granularity.",
+                title: "Customer-tier routing",
+                body: "Free users get routed to cost-efficient models. Paid users get full capability. Your rules, enforced inline.",
               },
               {
-                title: "Enforcement",
-                body: "Block requests, throttle usage, or fall back to cheaper models when budgets are exhausted.",
+                title: "Budget-pressure downgrade",
+                body: "When spend approaches the limit, Warden automatically downgrades to a cheaper model. No manual intervention.",
               },
             ].map(({ title, body }) => (
               <div
@@ -189,10 +185,10 @@ export default function ProductPage() {
       <section className="bg-white">
         <div className="max-w-5xl mx-auto px-8 py-24">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            One platform, every provider
+            One control layer, every provider
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            Unified cost visibility and control across all major LLM providers.
+            Enforce budgets, route requests, and attribute costs across OpenAI, Anthropic, and Google — from a single integration.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -278,10 +274,10 @@ export default function ProductPage() {
       <section className="bg-slate-50">
         <div className="max-w-5xl mx-auto px-8 py-24 text-center">
           <h2 className="text-3xl font-semibold mb-4">
-            See what your AI actually costs
+            Put your AI layer under control
           </h2>
           <p className="text-slate-600 mb-8">
-            Start free. Scale to full control as your usage grows.
+            Start free. Add enforcement as you grow.
           </p>
           <a
             href="https://control.wardenai.dev/signup"
