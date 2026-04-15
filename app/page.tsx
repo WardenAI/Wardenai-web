@@ -29,15 +29,13 @@ export default function Home() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-8 pt-24 pb-24 text-center">
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6">
-          Control your AI spend
+          Your AI layer.
           <br />
-          <span className="text-slate-400">before it spirals</span>
+          <span className="text-slate-400">Under control.</span>
         </h1>
 
         <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Warden shows exactly where your AI costs come from — by model,
-          feature, and customer — and lets you set limits before bills
-          get out of control.
+          Warden sits in front of your LLM calls and makes real-time decisions — block, route, enforce — based on rules you define. When a bug triggers thousands of requests, Warden stops it. When free users hit expensive models, Warden reroutes them. No code changes. Point your SDK at Warden.
         </p>
 
         <div className="flex items-center gap-4 justify-center">
@@ -64,18 +62,18 @@ export default function Home() {
       <section className="bg-slate-50">
         <div className="max-w-5xl mx-auto px-8 py-24">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            AI costs don&apos;t fail gradually. They spike.
+            AI costs don&apos;t drift. They spike.
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            By the time you see the bill, the damage is done.
+            By the time the invoice arrives, the damage is done.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              "A feature launch doubles token usage overnight",
-              "A model change silently increases cost per request",
-              "One customer drives a disproportionate share of spend",
-              "Finance sees the bill — but not the cause",
+              "A bug triggers a request loop. 4,000 calls fire before anyone notices.",
+              "A model change doubles cost per request — silently.",
+              "One feature drives 70% of your AI bill. No one knows which one.",
+              "Finance sees the number. Engineering can't explain it.",
             ].map((item) => (
               <div
                 key={item}
@@ -93,25 +91,25 @@ export default function Home() {
       <section className="bg-white">
         <div className="max-w-5xl mx-auto px-8 py-24">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            Visibility, attribution, and control — in one place
+            Enforce. Attribute. Control.
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            Warden gives you the full picture and the tools to act on it.
+            Warden doesn&apos;t just report on your AI usage — it governs it.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
-                title: "Visibility",
-                body: "See total AI spend across providers and models in real time.",
+                title: "Enforcement",
+                body: "Set hard limits per feature, team, or customer. When the budget hits, Warden blocks the request. Not an alert. A block.",
               },
               {
                 title: "Attribution",
-                body: "Break costs down by feature, team, and customer.",
+                body: "Every request tagged by feature, team, and customer. You know exactly what caused the spike.",
               },
               {
-                title: "Control",
-                body: "Set budgets, alerts, and enforce limits before costs escalate.",
+                title: "Routing",
+                body: "Define rules. Warden routes automatically. Dev uses GPT-4o-mini. Free users get the cheaper model. No app changes.",
               },
             ].map(({ title, body }) => (
               <div
@@ -130,10 +128,10 @@ export default function Home() {
       <section className="bg-slate-50">
         <div className="max-w-5xl mx-auto px-8 py-24">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            See exactly where your AI money goes
+            See every decision Warden made — and why
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            Real-time visibility across models, features, teams, and customers.
+            Every request shows: original model, final model, decision taken, reason. Full audit trail. No black boxes.
           </p>
 
           <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
@@ -229,18 +227,18 @@ export default function Home() {
             {[
               {
                 step: "01",
-                title: "Route your AI traffic through Warden",
-                body: "Point your SDK to Warden. We mirror your LLM provider's API surface — no code changes required.",
+                title: "Point your SDK at Warden",
+                body: "Warden mirrors your LLM provider's API surface exactly. No code changes. No refactoring. One config update.",
               },
               {
                 step: "02",
-                title: "Automatically tag and attribute usage",
-                body: "Every request is tagged by model, feature, team, and customer. Cost attribution happens automatically.",
+                title: "Warden makes decisions on every request",
+                body: "Budget check. Policy check. Routing rules. All evaluated inline, before the request hits your provider.",
               },
               {
                 step: "03",
-                title: "Monitor, alert, and control spend",
-                body: "Set budgets and alerts. Enforce limits to block, throttle, or switch to fallback models before costs escalate.",
+                title: "You see everything",
+                body: "Every decision logged. Every cost attributed. Every block explained. You're in control — and you can prove it.",
               },
             ].map(({ step, title, body }) => (
               <div
@@ -260,25 +258,25 @@ export default function Home() {
       <section className="bg-slate-50">
         <div className="max-w-5xl mx-auto px-8 py-24">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            Take action before costs explode
+            Rules you define. Decisions Warden makes.
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-xl mx-auto">
-            Warden doesn&apos;t just show you cost — it enforces limits.
+            Not alerts you act on later — enforcement that happens now.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
-                title: "Set budgets",
-                body: "Define spend limits per feature, team, or customer. Budgets reset automatically on your billing cycle.",
+                title: "Block",
+                body: "Hard stop when a budget limit is reached. The request never hits the provider. No alert to act on — it's already done.",
               },
               {
-                title: "Trigger alerts",
-                body: "Get notified via email or Slack before thresholds are crossed. No more bill surprises.",
+                title: "Route",
+                body: "Automatically switch models based on feature, environment, or customer. Cheaper model in dev. Best model for paid users.",
               },
               {
-                title: "Enforce limits",
-                body: "Block requests, throttle usage, or fall back to cheaper models when budgets are exhausted.",
+                title: "Enforce",
+                body: "Restrict which models are allowed across your system. Prevent teams from reaching for GPT-4 when GPT-4o-mini will do.",
               },
             ].map(({ title, body }) => (
               <div
@@ -301,9 +299,7 @@ export default function Home() {
               We never see your prompts
             </h2>
             <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed mb-6">
-              Warden operates entirely on metadata. We never store prompts,
-              responses, or request bodies. Your data stays between your
-              application and the LLM provider.
+              Warden operates on metadata — model, cost, tags. We never store prompts, responses, or request bodies. Your data travels directly between your application and the LLM provider.
             </p>
             <p className="text-emerald-400 font-medium">
               This isn&apos;t a policy — it&apos;s how the system is built.
@@ -316,10 +312,10 @@ export default function Home() {
       <section className="bg-slate-50">
         <div className="max-w-5xl mx-auto px-8 py-24 text-center">
           <h2 className="text-3xl font-semibold mb-4">
-            Know what your AI actually costs
+            Put your AI layer under control
           </h2>
           <p className="text-slate-600 mb-8">
-            Start free. Scale to full control as your usage grows.
+            Start free. Add enforcement as you grow.
           </p>
           <a
             href="https://control.wardenai.dev/signup"
